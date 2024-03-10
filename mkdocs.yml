@@ -5,6 +5,7 @@ site_description: Tutoriais básicos de Bioinformática para as disciplinas da U
 
 nav:
   - Página Inicial: index.md
+  - Sobre o grupo: aboutus.md
   - Tutoriais Iniciais de Bioinformática: 
     - Inicial: basic1.md
     - Introdução a linha de comando UNIX: 101.md
