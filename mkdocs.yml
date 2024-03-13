@@ -23,6 +23,8 @@ nav:
     - Navegando por Genomas: 113-Genomes.md
   - Bioinformática Estrutural:
     - Inicial: basic2.md
+    - Slides de Acompanhamento: slides.md
+    - Programas e Ferramentas: tools.md
     - Visualização Computacional de Moléculas: STR1-Visualizacao.md
     - Informações a partir da estrutura primária: STR2-pred.md
     - Predição de Epítopos: STR22-Epitopos.md
@@ -46,6 +48,7 @@ nav:
     - Posicionamento Manual: STR19-EGB4.md
     - Dinâmica Molecular: STR20-EGB5.md
     - VS-2: STR21-EGB6.md
+    - Complements: comps.md
 
 theme:
   name: readthedocs
