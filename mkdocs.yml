@@ -49,6 +49,7 @@ nav:
     - Dinâmica Molecular: STR20-EGB5.md
     - VS-2: STR21-EGB6.md
     - Complements: comps.md
+  - Diplomado - UChile: Presentation.md 
 
 theme:
   name: readthedocs
