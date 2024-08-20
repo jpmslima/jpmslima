@@ -1,4 +1,4 @@
-[![UChile](https://drive.google.com/uc?id=1xeSo8MOvqmgO4q_6lyidauaKOjdTPu3t)](http://www.postgradoquimica.cl/informacion-diplomado-en-bioinformatica-y-biologia-computacional/)
+![UChile](UChile.png)
 
 # First Tutorial
 
@@ -44,19 +44,19 @@ To be more straightforward, you could use [BLASTx](https://blast.ncbi.nlm.nih.go
 
 - Open the [NCBI-BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) site.
 
-![BLAST](https://drive.google.com/uc?id=1CZ0GD_Ad0QpCj34uw0F6Vv_RZdh2eEa4)
+![BLAST](1sT-fig1.png)
 
 - Click in blastx. The following page will open. Paste your sequence in the indicated field and choose the nr database. Then you can click ```BLAST``` button.
 
-![BLASTx](https://drive.google.com/uc?id=1au3i82_mPv438f9MPmhx80AmgYONDwSg)
+![BLASTx](1sT-fig2.png)
 
 - After a few moments, the BLAST search result will appear, as below:
 
-![BLASTx](https://drive.google.com/uc?id=1z_pYNKMou0TSJxU91ODerO1qKsnl3xul)
+![BLASTx](1sT-fig3.png)
 
 - Click in Alignments and analyze the results.
 
-![BLASTx](https://drive.google.com/uc?id=1fewCtlD82mHeDIoYGY4FZZRXPgJCcXn8)
+![BLASTx](1sT-fig4.png)
 
 > You can also translate the sequence using the frame +1 and perform a BLASTp search with the resulting amino acid sequence.
 
@@ -252,20 +252,20 @@ The next step on this tutorial is to align these sequences to get our dataset re
 - Open Jalview. Close all example windows.
 - Open the multifasta file, following the menu, shown in the figure below:
 
-![Jalview](https://drive.google.com/uc?id=1IEaubZlhl6s0cQpJR1uAFxsGO4zw2zRi)
+![Jalview](1sT-fig5.png)
 
 - Then, put some color in the alignment, using the following options:
 
-![Jalview](https://drive.google.com/uc?id=1_0U_iLyKqx2TFMkfz5WwAMue8YBCfGWU)
+![Jalview](1sT-fig6.png)
 
 - After that, you can start the alignment process, using Clustal, as demonstrated in the figure below:
 
-![Jalview](https://drive.google.com/uc?id=18Hlz0XOhP1s029UPhPW20LNrQiqAx4iI)
+![Jalview](1sT-fig7.png)
 
 - The aligned sequences will appear right after the job is done. Again, put some color and inspect the alignment.
 - Now we're going to save this alignment. However, first, we have to change some options in Jalview. In Jalview main window, go to the menu ```Tools``` and after that, press ```Preferences```. The following window will appear:
 
-![Jalview](https://drive.google.com/uc?id=1dBm8dDWdTwoUrV8uA3QZaUrGWXW2hhqT)
+![Jalview](1sT-fig8.png)
 
 - Press the right arrow until you find the ```Output``` options. Make sure the options are the same as the above figure. Press ```OK```.
 - After that, you can save your alignment, following the menu File > Save as...

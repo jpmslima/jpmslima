@@ -1,5 +1,3 @@
-[![UChile](https://drive.google.com/uc?id=1xeSo8MOvqmgO4q_6lyidauaKOjdTPu3t)](http://www.postgradoquimica.cl/informacion-diplomado-en-bioinformatica-y-biologia-computacional/)
-
 # First steps in BEAST
 
 ## Aims
@@ -51,12 +49,12 @@ END;
 
 To use this alignment in analysis with BEAST, we will have to import it with the BEAUti tool. It is an interactive graphical application to outline your analysis and generate the control file (an XML file) used by BEAST to perform the analysis.
 
-> <img src="https://drive.google.com/uc?id=1-goHD5y1oNS5Ln0mzwdmMP2P1E6VxXQ0" width="50" height="50"> 
+> <img src="beastST-fig1.png" width="50" height="50"> 
 > This is the BEAUti icon. Just double-click it to execute it.
 
 Once BEAUti is executed, a window similar to the one below should appear:
 
-![BEAUti](https://drive.google.com/uc?id=135HbHDF4L2F7z98dcoyiXUU_qE193z6f)
+![BEAUti](beastST-fig2.png)
 
 To load the nexus alignment file, you have two options:
 
@@ -67,15 +65,15 @@ BEAUti can also import fasta files (as long as the sequences are aligned) or BEA
 
 Once loaded, the alignment will be displayed in table format in the main window:
 
-![BEAUti](https://drive.google.com/uc?id=1qWK0rhBYcrH-gWJ5-wlHKVgc9UldPQKS)
+![BEAUti](beastST-fig3.png)
 
 By double-clicking on the table row, the alignment can be viewed (although not good):
 
-![BEAUti](https://drive.google.com/uc?id=1gYNzK2tNL-16zVbbyJMbQ-McPHtDQZpR)
+![BEAUti](beastST-fig4.png)
 
-At the top of the main window, a series of "guides" can be observed:
+At the top of the main window, a series of "tabs" can be observed:
 
-![BEAUti](https://drive.google.com/uc?id=1O3GosOqVlEndcj9fheZ-ABVaP8zzoYkH)
+![BEAUti](beastST-fig5.png)
 
 Each of these tabs has settings and options. In general, you should always work with them from left to right. However, not all guides will be relevant for all analyses. After the Partitions tab, you can go to the tab called Tip Dates.
 
@@ -83,13 +81,13 @@ Each of these tabs has settings and options. In general, you should always work 
 
 The ``Tip Dates`` tab is used to put dates for each of the *rates* in your analysis. In it, you will see a table with all the taxonomic groups you are analyzing. Taxon dates (*Tip dates*) are only important in some cases, for example when you are working with rapidly evolving viruses or DNA from old samples or fossils. In the case of this analysis of primates that we are performing in this tutorial, the tree represents millions of years of evolution, so the dates can be assumed to be zero. This is the pattern - all *rates* have a date of zero, and the use of the *Tip Dates* tab is not selected.
 
-![](https://drive.google.com/uc?id=1-j-oqRflaFWCDG3hN7fW6CfHITl68Ccd)
+![](beastST-fig6.png)
 
 ## Setting up the evolutionary model
 
 In the ``Site Model`` tab you can adjust the molecular evolution model (nucleotide and amino acid substitution model) to the sequence data you have loaded (apes.nex). The exact options will appear depending on the type of data you have loaded (nucleotides, amino acids or other form of data). The options that will appear after the ``apes.nex'' alignment data has been loaded are as follows:
 
-![](https://drive.google.com/uc?id=1ikJZMT79iJ8SDD3qhjAx8ZfA6px4KHaV)
+![](beastST-fig7.png)
 
 This tutorial assumes that you have read or studied the different evolutionary models available. In this analysis, we will use the [HKY](https://www.ncbi.nlm.nih.gov/pubmed/3934395) model.
 
@@ -99,7 +97,7 @@ This tutorial assumes that you have read or studied the different evolutionary m
 
 In the next tab, ``Clock Model``, we will determine the molecular clock model that will be used in the analysis. Unlike many other phylogenetic analysis programs, BEAST exclusively uses molecular clock models so that trees have a time scale (an inferred root and a direction in time). The simplest model is the "*Strict clock*" or restricted clock pattern. Such model assumes that all branches in the tree have the same rate of evolution. Other molecular clock models relax these assumptions in various ways, and other advanced tutorials can be used to verify their application.
 
-![](https://drive.google.com/uc?id=1JRMOeJjF8Wo8nJsHXbukh8G0LJRKsavr)
+![](beastST-fig8.png)
 
 Select *Strict Clock* and switch to the ``Priors`` tab.
 
@@ -109,7 +107,7 @@ It is on this panel that the *priors* of Bayesian analysis will be determined. I
 
 The *priori* of the tree (*Tree Prior*) has many possibilities, usually divided into coalescing models (*Coalescent*), which are generally suitable for populations, and speciation models (*Speciation*), which as the name suggests are directed to species-level data. As the alignment we have is of several species, we will select the model of [Yule](http://rstb.royalsocietypublishing.org/content/213/402-410/21), which is the simplest speciation model, where it is assumed that each lineage presented speciation at a fixed rate.
 
-![](https://drive.google.com/uc?id=1vWHcTG8DF8Ocb6cC16B2vEPOuLgHa31f)
+![](beastST-fig9.png)
 
 For each *priori* model of the tree, the following specific parameters appear in the window. Each parameter in the model has operators, which specify how the parameters change as the MCMC rotates. For the Yule model, only two parameters are needed: ``kappa``, which means the tendency of transitions-transversions in the HKY model; and the birth rate of new species ``birthRate``.
 
@@ -119,7 +117,7 @@ BEAST reasonably maintains the standard values for the *priors* of each model. S
 
 On this tab, we will have the settings to run the Bayesian analysis by BEAST.
 
-![](https://drive.google.com/uc?id=1S37NVxU7E-PUZK_DBRSatRmcveK2s6LT)
+![](beastST-fig10.png)
 
 First we have the length of the chain (or referred to as the number of generations). This is the number of steps that the MCMC will do in the chain before finishing the process. How long it should depend on the size of the data set, the complexity of the model, and the quality of the required response. In this case, the default value is entirely arbitrary and must be adjusted according to the size of the data set that will be analyzed. To verify that the string size is adequate, the resulting log file (*log file*) can be analyzed using the **Tracer** program (we will verify this later). The goal of selecting an adequate chain size is to achieve a reasonable (*ESS - Effective Sample Size*). 
 
@@ -131,17 +129,17 @@ For the ``tracelog``, the value must be relative to the chain size's total value
 
 For this data set (which is quite small), we will start the analysis with a chain size of 1,000,000, as this value will run very quickly on most computers today. Therefore, put the frequency record (sampling) in the log file for 100.
 
-![](https://drive.google.com/uc?id=1bRkR_SaD3LcK-REnibwZ6CxCUOb_zo7S)
+![](beastST-fig11.png)
 
 The screen output is simply to monitor the progress of the BEAST race, so any value  can be placed (however, if you choose a too small value, the amount of information that will appear on the screen may slow down the program terminal).
 
-![](https://drive.google.com/uc?id=1PLWUMU1n0SRaV3wdSwHG4iljRgA0GSi6)
+![](beastST-fig12.png)
 
 > *The frequency of screen log sampling and trace log can be different. In this case, our analysis will run very fast, so sampling the screen log for every 100 steps will cause a quick movement on the screen due to a large amount of information.*
 
 For the `tree log` option, leave the same sampling number in `trace log`.
 
-![](https://drive.google.com/uc?id=1DFPPtQCUk_Q_-aZmbS7RGva1wqr5PKXT)
+![](beastST-fig13.png)
 
 ## Saving and uploading the BEAUti files
 
@@ -158,11 +156,11 @@ Now the file is ready to be run with BEAST.
 
 Turn BEAST2 by clicking the following icon:
 
-<img src="https://drive.google.com/uc?id=1jeQM6K1lnuN5yZy9vyb8xDzozp0Wk1yV" width="50" height="50">
+<img src="beastST-fig14.png" width="50" height="50">
 
 The following window will appear:
 
-![BEAST2 Main Window](https://drive.google.com/uc?id=13Pe89udmeiJGR-RrFwlLaHqL20GQADwy)
+![BEAST2 Main Window](beastST-fig15.png)
 
 From now on, all you need to do is click on ``Choose File...``, select the XML file you saved in the previous steps and press ``Run``.
 
@@ -174,15 +172,15 @@ From now on, all you need to do is click on ``Choose File...``, select the XML f
 
 When running, BEAST (in any version) will load the XML file, configure the parsing and run it without additional interaction. It starts with the title and credits of the software. You will see the output screen, with various information, similar to the one below:
 
-![](https://drive.google.com/uc?id=1ir0GID_NPJCl3fKt1SXoFSLkHDVkQ927)
+![](beastST-fig16.png)
 
 A little lower, in this same window you will be able to see the citations of the models used and the MCMC chain screen log, with an estimate of the time of the analysis (time unit / Millions of samples):
 
-![](https://drive.google.com/uc?id=1PdFozbOAYkwaw1-dBVF37NR8LGfeGEXb)
+![](beastST-fig17.png)
 
 And at the end, a diagnosis of the adequacy of the analysis parameters to the data group:
 
-![](https://drive.google.com/uc?id=1wt1xlHU9ZQ53f38oI8rw8ngcNi4pTQ1O)
+![](beastST-fig18.png)
 
 > To learn more about the changes in these parameters, look for the BEAST documentation. Only change them with absolute certainty of what you are doing.*
 
@@ -197,19 +195,19 @@ Tracer](http://tree.bio.ed.ac.uk/software/tracer/) is a program to analyze the f
 
 Run TRACER by clicking on the icon:
 
-<img src="https://drive.google.com/uc?id=1iYlcwyrzThXa2w5kA6Tw0Xxqvqev6VWK" width="50" height="50">
+<img src="beastST-fig19.png" width="50" height="50">
 
 When opened, Tracer will show the following window:
 
-![](https://drive.google.com/uc?id=1RSJynytfITmXwESaqzxaZkl5KLYvgqH2)
+![](beastST-fig20.png)
 
 To open the MCMC trace log file (file ``.log``), click the ``+`` symbol just below ``Trace Files:`` (indicated by the arrow on the figure above). After this step, a window like this should be displayed:
 
-![](https://drive.google.com/uc?id=1fAMqyqprEqHteJXS_92YVvJm09wxnSQL)
+![](beastST-fig21.png)
 
 Note that the <span style="color:red">***Arrow 1***</span> shown in the figure above is indicating that Tracer assigns 10% to **Burn-In**. This is the number of steps at the beginning of the chain that is discarded from the analysis, which tends to present a greater variation in the parameters.
 
-> *The discard or burn-in of 10% of the total chain size is the recommended one. However, this can be changed. This value can be increased in races with larger MCMC chain sizes.* 
+> *The discard or burn-in of 10% of the total chain size is the recommended one. However, this can be changed. This value can be increased in races with larger MCMC chain sizes.* docs/MEGAX_ENG.md
 
 Observe the parameters highlighted by the red frame. In all, the values in the **ESS** column (*Effective Sample Size*) must be in black. This demonstrates that the values are suitable for analysis. When they are not, they are marked in the colors <span style="color:orange">orange</span>, which indicates that they are partially adequate, or <span style="color:red">red</span>, which indicates that they are not adequate. The parameters that should be analyzed initially are *posterior*, *likelihood*, and the model's statistical parameters as *prior* or *YuleModel*.
 
@@ -217,13 +215,13 @@ To match the parameter statistics that the ESS is marked in red, you can increas
 
 Click on <span style="color:red">***Arrow 2***</span> and the ***Trace*** of the race can be observed. The gray part in Trace demonstrates exactly the ***Burn-In*** employed in the analysis, as can be seen in the figure below:
 
-![](https://drive.google.com/uc?id=1KowUS5SECRAxBJJqm1q_4ZrJbEwXcS8v)
+![](beastST-fig22.png)
 
 *This same burn-in will also be used when summarizing the trees of Bayesian analysis.*
 
 Finally, select the statistics of the *posterior* and *likelihood* parameters (using the ``ctrl`` key on your keyboard) and click on <span style="color:red">***Arrow 3***</span>. Tracer will return you a graph of the point distribution of the 2 parameters, similar to the figure below:
 
-![](https://drive.google.com/uc?id=15tcoklNEVin_u-hEyuySkrFCffA0x-vi)
+![](beastST-fig23.png)
 
 For further details on the analysis with Tracer and its other functions, in-depth readings on Bayesian Inference, the Tracer manual/readme and the BEAST community are recommended.
 
@@ -233,11 +231,11 @@ Now we will work with the ``.trees`` file, generated by BEAST. As described prev
 
 We have to summarize all these trees, in one, with the *a posteriori* (PP) probability values in each node of the tree. For that, we will use a program provided with the BEAST, called TreeAnnotator. To run it, click on its respective icon:
 
-<img src="https://drive.google.com/uc?id=1ZjQuNHkoCbHu9p9eI5xSnRSab8V5XeNn" width="50" height="50">
+<img src="beastST-fig24.png" width="50" height="50">
 
 A window similar to the one below will appear:
 
-![](https://drive.google.com/uc?id=1dhiQ2L4H-Z0tcLh3T0LSHXtNmbKgnEcT)
+![](beastST-fig25.png)
 
 In the **Burnin percentage** box, you will put the *burn-in* percentage of this analysis, that is, the first generated trees that will be discarded from the analysis because they are at the beginning of the chain.
 
@@ -251,4 +249,4 @@ A recommended program for tree visualization is the FigTree program, which can b
 
 The file ``.trees`` can also be viewed with the **DensiTree** program. This program makes a schematic representation with all the trees, facilitating the analysis of inconsistencies. ***DensiTree*** can be executed by the icon:
 
-<img src="https://drive.google.com/uc?id=1aJEA5k9523QxBTpj0cTIqZb0T73Sm02r" width="50" height="50"> 
+<img src="beastST-fig26.png" width="50" height="50"> 

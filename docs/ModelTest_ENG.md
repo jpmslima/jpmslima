@@ -1,5 +1,3 @@
-[![UChile](https://drive.google.com/uc?id=1xeSo8MOvqmgO4q_6lyidauaKOjdTPu3t)](http://www.postgradoquimica.cl/informacion-diplomado-en-bioinformatica-y-biologia-computacional/)
-
 # Choosing an appropriate substitution Model
 
 ## Introduction
@@ -18,39 +16,39 @@ In its first version, the program [MEGA](www.megasoftware.net) did not have a ro
 - Run the MEGAX program.
 - Open the alignment by clicking on the ``TA`` button and then on *Open a File/Session...*, according to the picture below:
 
-![MegaX](https://drive.google.com/uc?id=1FJSEHkqgypK-v62xTtaN0D-9-Y_50Ih0)
+![MegaX](MTENG-fig1.png)
 
 - In the next pop-up window, click on *Analyze* (these sequences are already aligned):
 
-![Analyze](https://drive.google.com/uc?id=1Y3fe37o7GmCXhcgr5VWJo3Y60vQUXYFy)
+![Analyze](MTENG-fig2.png)
 
 - MEGA will ask you the following questions: whether they are nucleotide sequences. Click Ok.
 
-![Nucleotide sequences](https://drive.google.com/uc?id=1UxoBNG69mCqcMvWmynlKkMYYYMN5rGGh)
+![Nucleotide sequences](MTENG-fig3.png)
 
 - They are protein-coding sequences. Answer *Yes*.
 
-![Coding sequences](https://drive.google.com/uc?id=1LP3I1oxJERBUTshJ78gMljzi0Iq2FHRa)
+![Coding sequences](MTENG-fig4.png)
 
 - When answering, you will need to select the specific genetic code. Click *Vertebrate Mitochondrial*:
 
-![Select genetic code](https://drive.google.com/uc?id=1UdZJ6ywkOrnEQLTIexLHCD30sARuyAGD)
+![Select genetic code](MTENG-fig5.png)
 
 - With the file open, click on ``Models``,
 
-![Models in MEGA X](https://drive.google.com/uc?id=1JzEoxIAKVW1aL2YzbPyjcQ3a0BrbByyc)
+![Models in MEGA X](MTENG-fig6.png)
 
 - And select the first item, *Find Best DNA/Protein Models (ML)...*:
 
-![best-fit model in Mega X](https://drive.google.com/uc?id=1-cdQ7NmejYsU9sTHdo2CMX15zuczWaH8)
+![best-fit model in Mega X](MTENG-fig7.png)
 
 - Answer yes in the dialog box that appears right after, to use the open dataset:
 
-![](https://drive.google.com/uc?id=1_b3jhh81Pr92Tg1YA_17BbHTPVEIFDVY)
+![](MTENG-fig8.png)
 
 - After confirmation, the following box will appear:
 
-![](https://drive.google.com/uc?id=1wrzx8j5wxKeLwnvpC9TvpML361SytAzg)
+![](MTENG-fig9.png)
 
 - Let us look at the options (as shown in the figure above):
   - We will use an automatic *Neighbor-Joining* tree as the initial hypothesis for this data.
@@ -59,7 +57,7 @@ In its first version, the program [MEGA](www.megasoftware.net) did not have a ro
   - Leave the number of *Threads* in the pattern that appeared on the computer you are using.
   - Finally, click Ok. The process will take a while, depending on the available computing resources. The results will appear as the table below:
 
-![Best-fit models results](https://drive.google.com/uc?id=1DIKllj-vrTKGndev704GabyUCiUypE_K)
+![Best-fit models results](MTENG-fig10.png)
 
 The results appear in a list of the best model to the least suitable for the data used. In MEGA X the information criterion used is Bayesian (BIC). By it, we can verify that the GTR model (*General Time-reversible*) plus gamma correction (+G) was the model chosen by the Bayesian criterion. However, it is not the model with the least likelihood (*lnL*). The rest of the information in this table will be discussed during the remote meeting.
 
@@ -91,13 +89,13 @@ $ java -jar jModelTest
 
 - The window below will appear:
 
-![jmodeltest1](https://drive.google.com/uc?id=1n4wrA3n2OUeRWj8OhJTE-K1kZsEnUF9j)
+![jmodeltest1](MTENG-fig11.png)
 
 - Click *File > Load DNA alignment* and open the data set vert-aligned.fasta file.
 - Click *Analysis > Compute likelihood scores* to start the analysis.
 - A dialog box will appear that allows you to specify the number of probability settings, including the number of models to be tested. The other settings are different base frequencies (+F); the proportion of invariable sites (+I), and gamma distribution (+G) (variation in rate across sites). In this dialog box, leave the options as in the figure below.
 
-![jmodeltest2](https://drive.google.com/uc?id=1DNIz-P1pUrCLcrxmFvii1fJci_qI0YOO)
+![jmodeltest2](MTENG-fig12.png)
 
 - Click on ``Compute Likelihoods`` and wait (or go for a coffee, because depending on the *dataset* this step will take longer than the one performed on MEGA X). For the alignment used here and with these options, this step will take between 1 and 4 min.
 
@@ -107,21 +105,21 @@ $ java -jar jModelTest
 - Now click again on the *Analysis* menu. You will see that the AIC, BIC, and DT calculations are now available, while the hLRT calculations are grayed out (because in the previous step, we chose to have optimized tree topologies).
 - Now click on *Results > Show results table*. A window will appear, showing the calculated probabilities for each model.
 
-![jmodeltest-table1](https://drive.google.com/uc?id=1D-NDW3rMqy_9TFVwLpqc08s39yY0gOwy)
+![jmodeltest-table1](MTENG-fig13.png)
 
 - Now click on the top of the "LnL" column. This action will sort the models according to likelihood. The table will then look like this:
 
-![jmodeltest-table2](https://drive.google.com/uc?id=1QkzhxR5sS8WJwsfOY0bTKAbCsijsFCwj)
+![jmodeltest-table2](MTENG-fig14.png)
 
 - It can show the partition schemes, the number of parameters included the observed base frequencies, and the transition and transversion rates. Note that the tables for AIC, AICc, BIC, and DT results are in grey. For that, the table can be closed, and from the *Analysis* menu click on *Do BIC calculations...* and on *Do DT calculations...*, confirming each dialog box that will appear later, as can be verified in the figure below:
 
-![BIC and DT calculations](https://drive.google.com/uc?id=1Ly0zoycGXVGezQ7Eac2YiVD_zpS7HsSx)
+![BIC and DT calculations](MTENG-fig15.png)
 
 > *Make sure that the options Calculate parameter imports and Do model averaging are always selected*
 
 - Then, we will go to *Analysis* > *Do AIC calculations...*. In the backbox, check the option *Use AICc correction*, as shown in the figure below:
 
-![AICc correction](https://drive.google.com/uc?id=1uUADsFXUimHtZZ6w9nC0tFW_Ebvbhe-x)
+![AICc correction](MTENG-fig16.png)
 
 > *You can also do the Akaike calculation without the correction for comparison purposes. Just do not select the above option*
 
@@ -141,13 +139,13 @@ Prottest 3 can be obtained [HERE](https://github.com/ddarriba/prottest3/releases
 
 To demonstrate ProtTest's operation, we will use the amino acid alignment [COX2_PF0016](https://drive.google.com/uc?export=download&id=1d1KpZNgn7atWSkc8_PQOh4zKJuu45rhY), one of the examples provided with the program itself.
 
-![ProtTest](https://drive.google.com/uc?id=1fZffIhyU_F3ksB7FLFN7CEWZiw2H4KEE)
+![ProtTest](MTENG-fig17.png)
 
 - Click on *File > Load alignment* and open the downloaded [COX2_PF0016](https://drive.google.com/uc?export=download&id=1d1KpZNgn7atWSkc8_PQOh4zKJuu45rhY) file above. See the information that appeared in the application console.
 - Then go to *Analysis > Compute likelihood scores* to start the analysis. A dialog will appear that allows you to specify the number and models to be tested in addition to some other settings.
 - In *Starting Topology* choose *Maximum likelihood tree* or leave the default (*Fixed BioNJ JTT*).
 
-![ProtTest](https://drive.google.com/uc?id=1fZffIhyU_F3ksB7FLFN7CEWZiw2H4KEE)
+![ProtTest](MTENG-fig17.png)
 
 - Click *Compute* and wait for the calculations to finish.
 
@@ -155,7 +153,7 @@ To demonstrate ProtTest's operation, we will use the amino acid alignment [COX2_
 
 - When finished, just click the *Selection* menu and click *Results*. The results table will appear.
 
-![ProtTest 3 Results](https://drive.google.com/uc?id=1sxsIhnyHaNWQWMC3sGtVjJqUQPp9Nt4C)
+![ProtTest 3 Results](MTENG-fig18.png)
 
 A notable difference between ProtTest and jModelTest is that the calculations of the information criteria are within the results table. Analyze the table. More information will be given in the classroom.
 
@@ -163,7 +161,7 @@ A notable difference between ProtTest and jModelTest is that the calculations of
 
 Compare the results obtained for the COX2_PF0016 alignment in both ProtTest and MEGA X. To use this alignment on MEGA, use [this file](https://drive.google.com/uc?export=download&id=1UDI0QtUgUxnmTpvd3ulvWZ1Mz01M2sU1). Below is a table with the results.
 
-![MEGAX](https://drive.google.com/uc?id=1oVHLNFqlcMN2qnhRZJykXx0Eu1Rv2KfF)
+![MEGAX](MTENG-fig19.png)
 
 ## ModelTest-NG
 
@@ -173,12 +171,12 @@ For this we will use the same file used previously: [vert-aligned.fasta](https:/
 
 - Run ModelTest-NG:
 
-![ModelTest-NG](https://drive.google.com/uc?id=1LnHJ7yq9Gw_32oD-FDgkjykcZxUl5CaU)
+![ModelTest-NG](MTENG-fig20.png)
 
 - Click on ``Load MSA`` and choose the file above. The alignment characteristics will appear.
 - Click the "Settings" tab, and you will see the test options, similar to previous programs.
 
-![ModelTest-NG - Settings](https://drive.google.com/uc?id=15frRzX1yU1oELkI_az47-Bfpg6oO_6F9)
+![ModelTest-NG - Settings](MTENG-fig21.png)
 
 - Do not forget to change the initial tree to one of *Maximum likelihood*. Once you have done that, you can click on ``Run``.
 
@@ -186,11 +184,11 @@ For this we will use the same file used previously: [vert-aligned.fasta](https:/
 
 - The results are almost the same as in jModelTest.
 
-![ModelTest-NG Results](https://drive.google.com/uc?id=1N0n5ZXfrqGFUqvOuvUpClZdT1Un8cL23)
+![ModelTest-NG Results](MTENG-fig22.png)
 
 - We will now click on Reset and repeat the previous steps for the alignment [COX2_PF0016](https://drive.google.com/uc?export=download&id=1d1KpZNgn7atWSkc8_PQOh4zKJuu45rhY). Since this alignment is of amino acid sequences, do not forget to mark in the *Settings* tab the option *Protein*, because in our tests ModelTest-NG does not always correctly identify the type of sequence. Below is a preview of the result:
 
-![ModelTest-NG protein](https://drive.google.com/uc?id=1-7tYNWASg4mjQJcMqTzFlpCe98QDa-01)
+![ModelTest-NG protein](MTENG-fig23.png)
 
 ## Final remarks
 

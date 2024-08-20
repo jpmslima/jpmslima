@@ -1,16 +1,6 @@
-[![UChile](https://drive.google.com/uc?id=1xeSo8MOvqmgO4q_6lyidauaKOjdTPu3t)](http://www.postgradoquimica.cl/informacion-diplomado-en-bioinformatica-y-biologia-computacional/)
+![UChile](UChile.png)
 
-# Material
-
-## *Slides*
-
-*pdf files of the slides*
-
-[Part 1](https://drive.google.com/uc?export=download&id=1TKbiD11poMbAqir3m72s4xzC5a8jZqGy)
-
-[Part 2](https://drive.google.com/uc?export=download&id=1kjCvaHjjfA8FZmynFGIHjSSWjLHZf2YI)
-
-[Part 3](https://drive.google.com/uc?export=download&id=1v66X3JLLS24j8ZHJ9xGgrlvzSYxiHfwq)
+# Files
 
 ## Working *Datasets*
 
