@@ -11,7 +11,7 @@ Grande parte das ferramentas utiliza o princípio estatístico da verossimilhan�
 
 ## Usando o MEGA X
 
-Nas suas primeiras versões o programa [MEGA](www.megasoftware.net)  não possuía uma rotina para realização de testes do modelo de substituição. Mesmo assim, ele foi um dos primeiros programas a incluir nativamente esta função. O algoritmo é rápido, no entanto ele testa um número maior de modelos dos que estão disponíveis na própria ferramenta.
+Nas suas primeiras versões o programa [MEGA](http://www.megasoftware.net)  não possuía uma rotina para realização de testes do modelo de substituição. Mesmo assim, ele foi um dos primeiros programas a incluir nativamente esta função. O algoritmo é rápido, no entanto ele testa um número maior de modelos dos que estão disponíveis na própria ferramenta.
 
 - Utilizaremos o arquivo de alinhamento múltiplo de sequências [vert-aligned.fasta](https://drive.google.com/uc?export=download&id=12-vfD16vil2cTmNM2VOMfuj48LGo9iT2).
 - Execute o programa MEGAX (nos computadores do curso o ícone estará na área de trabalho).

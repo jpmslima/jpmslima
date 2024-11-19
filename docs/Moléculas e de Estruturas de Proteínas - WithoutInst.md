@@ -1,4 +1,4 @@
-[![Biome](https://drive.google.com/uc?id=1Rgh88avopwh7YtUKsD5hXMwF3BFH5-Kj)](bioinfo.ufrn.br)
+[![Biome](https://drive.google.com/uc?id=1Rgh88avopwh7YtUKsD5hXMwF3BFH5-Kj)](http://bioinfo.ufrn.br)
 
 # Visualizando Estrutura de Proteínas
 
@@ -107,7 +107,7 @@ No entanto, veja as fórmulas de todos os aminoácidos de forma mais prática ut
 
 ## Visualizando peptídeos e estruturas
 
-Este exercício cobrirá os tipos básicos de estruturas de proteínas representados no banco [PDB](rcsb.org). O termo *fold* refere-se a um tipo global de arranjo de estruturas secundárias, como feixe de hélices-alfa ou um barril de folhas betas. Apesar de existirem milhares de estruturas experimentalmente determinadas, o número de *folds* únicos que essas proteínas adotam é limitado, e todas as proteínas podem ser classificadas em uma das categorias de *folds*, que são anotadas em bancos de dados como o CATH e o SCOP. No geral, funções semelhantes podem estar associadas a certos *folds* proteicos, e a classificação dos *folds* serve como uma ferramenta importante para entender a possível função de uma proteína.
+Este exercício cobrirá os tipos básicos de estruturas de proteínas representados no banco [PDB](http://rcsb.org). O termo *fold* refere-se a um tipo global de arranjo de estruturas secundárias, como feixe de hélices-alfa ou um barril de folhas betas. Apesar de existirem milhares de estruturas experimentalmente determinadas, o número de *folds* únicos que essas proteínas adotam é limitado, e todas as proteínas podem ser classificadas em uma das categorias de *folds*, que são anotadas em bancos de dados como o CATH e o SCOP. No geral, funções semelhantes podem estar associadas a certos *folds* proteicos, e a classificação dos *folds* serve como uma ferramenta importante para entender a possível função de uma proteína.
 
 - Abra o USCF Chimera.
 
@@ -262,7 +262,7 @@ b) Explique por que os ângulos *ø* e *Ψ* na configuração 0/0 não é uma es
 
 c) Os ângulos *ø* e *Ψ* na configuração 57 e -47,respectivamente, é favorável? Explique.
 
-##### Para entrega:
+##### Adicional:
 
 Repita os passos para o peptídeo **RPQ** e explique os resultados obtidos, com os mesmos ângulos que você modificou para o peptídeo **RDQ**. Estes resultados devem ser descritos em forma de texto (máximo 1 página), contendo:
 

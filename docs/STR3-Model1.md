@@ -89,9 +89,9 @@ Para obter informações sobre prováveis moldes para a proteína, temos de faze
 
 Siga os passos:
 
-1. Abrir a Home Page do NCBI: [www.ncbi.nlm.nih.gov](www.ncbi.nlm.nih.gov)
+1. Abrir a Home Page do NCBI: [http://www.ncbi.nlm.nih.gov](http://www.ncbi.nlm.nih.gov)
 
-2. Clicar no link **BLAST** (Na lateral direita ou ir diretamente em [www.ncbi.nlm.nih.gov/blast](www.ncbi.nlm.nih.gov/blast)).
+2. Clicar no link **BLAST** (Na lateral direita ou ir diretamente em [http://www.ncbi.nlm.nih.gov/blast](http://www.ncbi.nlm.nih.gov/blast)).
 
 3. Clicar em *protein BLAST* (BLASTP).
 

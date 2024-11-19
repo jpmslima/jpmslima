@@ -71,7 +71,7 @@ Basta copiar e colar no gedit e salvar como ```config.cfg```.
  
 As informações são necessárias para o centro do sítio ativo e também o tamanho de uma caixa que englobe todo o sitio. Iremos usar o UCSF Chimera pera obter esses valores. Para isso é só abrir o Arquivo ```2P7U.pdb``` e definir uma caixa ao redor do ligante.
 
-![Chimera-Autodock 2](hstr18-fig6.png)
+![Chimera-Autodock 2](str18-fig6.png)
 
 Coloque valor para o *Center* e *Size* como na figura, com a opção ```Resize search volume options``. Reposicione a caixa até envolver o ligante como um todo. Não crie uma caixa muito grande, pois o ligante pode parar fora do local desejado. Não crie uma caixa muito pequena, ou ligante é vai ficar espremido no sítio de ligação.
 

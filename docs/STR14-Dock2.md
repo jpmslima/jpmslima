@@ -145,7 +145,7 @@ Ao final, pressione ```OK``` e observe as ligações de hidrogênio existentes e
 
 ### Introdução
 
-Além deste programa, o [SwissDock]((http://www.swissdock.ch/)) [[4](https://pubmed.ncbi.nlm.nih.gov/21624888/#:~:text=This%20article%20presents%20SwissDock%2C%20a,and%20the%20ligand%20input%20files.)] é uma plataforma onde é possível realizar o docking molecular via Web.
+Além deste programa, o [SwissDock](http://www.swissdock.ch) [[4](https://pubmed.ncbi.nlm.nih.gov/21624888/#:~:text=This%20article%20presents%20SwissDock%2C%20a,and%20the%20ligand%20input%20files.)] é uma plataforma onde é possível realizar o docking molecular via Web.
 
 O docking realizado no SwissDock também se baseia em 4 etapas. As duas primeiras etapas, as de Preparação do ligante e do receptor, serão realizados da mesma forma que aplicamos para o tutorial do AutoDock Vina, é só repetir as etapas 1 e 2 acima descritas. Portanto, iremos iniciar já nas etapas 3 e 4, descritas abaixo.
 
@@ -153,7 +153,7 @@ O docking realizado no SwissDock também se baseia em 4 etapas. As duas primeira
 
 O SwissDock é bem intuitivo para submissão de um processo de *docking*. Siga as etapas abaixo:
 
-- Na página do [SwissDock](http://www.swissdock.ch/) vá na aba ***Submit Docking***. 
+- Na página do [SwissDock](http://www.swissdock.ch) vá na aba ***Submit Docking***. 
 - No campo ***Target selection*** insira a proteína 6M2Q em formato .pdb. 
 - No campo ***Ligand selection*** insira o ligante 3WL em formato .mol2. 
 

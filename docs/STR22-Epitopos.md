@@ -27,7 +27,7 @@ Vamos primeiro verificar quais regiões desta proteína podem ser possíveis epi
 - Para fins de simplificação, analisaremos apenas o alelo humano **HLA-A-01:01**. Na caixa ao lado, colocar *All lengths* (Para todos os tamanhos de epitopos).
 - Observe a tabela resultante, que deverá ser similar a abaixo:
 
-![MHC-I](str22-fig2.png6)
+![MHC-I](str22-fig2.png)
 
 Na tabela acima, ele demonstra o Alelo, a posição na sequência, o tamanho e a sequência do peptídeo, e na última coluna o *Percentile Rank*. Segundo o método, quanto menor for este percentil, melhor será a ligação com o MHCI. Selecione a caixa ```Check to expand the result```. A tabela será expandida com os seguintes resultados:
 
@@ -102,7 +102,7 @@ Para predição do potencial alergênico de uma determinada proteína, também u
 
 Utilizaremos o banco [AllergenOnline](http://www.allergenonline.org), mantido pela Universidade de Nebraska. Nele você pode procurar pelo nome, código e também pela sequência. Vamos fazer a consulta pela sequência:
 
-![Página Inicial do AllergenOnline](str22-fig9.pngJ)
+![Página Inicial do AllergenOnline](str22-fig9.png)
 
 - Abra a página do [AllergenOnline](http://www.allergenonline.org).
 - Na lateral esquerda, clique na opção ***Sequence Search Allergen Database***.

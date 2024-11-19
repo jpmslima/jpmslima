@@ -17,10 +17,13 @@ nav:
     - NCBI/GenBank via CLI: 107-NCBI-CLI.md
     - BLAST via CLI: 108-BLAST-CLI.md
     - Comandos Básicos em SQL: 109-SQL.md
+    - Integração de Bancos - Exemplo: enzima-annot.md
+    - Explorando Vias Metabólicas: KEGG.md
     - Bancos de Dados de Informação Proteica: 110-BDs.md
     - Modelagem Computacional de Proteínas: 111-Modelagem.md
     - Primeiros Passos no MEGA: 112-MEGAX.md
     - Navegando por Genomas: 113-Genomes.md
+    - Videoaulas: video.md
   - Bioinformática Estrutural:
     - Inicial: basic2.md
     - Slides de Acompanhamento: slides.md
@@ -30,7 +33,7 @@ nav:
     - Predição de Epítopos: STR22-Epitopos.md
     - Modelagem 101: STR3-Model1.md
     - Modelagem 102: STR4-Model2.md
-    - Modeller-CLI: STR5-Model3.md
+    - Modeller-CLI: STR5-Model3.mkdocs gh-deploy --forcemd
     - Métodos baseados em IA: STR6-AlphaFold.md
     - MDA: STR7-MDA.md
     - Avaliação dos Modelos: STR8-Aval.md

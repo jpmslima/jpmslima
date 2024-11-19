@@ -3,7 +3,7 @@
 ### Objetivos
 
 - Identificar sequências por meio da busca por similaridade do BLAST.
-- Realizar o alinhamento múltiplo de sequências utilizando o [Jalview](jalview.org).
+- Realizar o alinhamento múltiplo de sequências utilizando o [Jalview](http://jalview.org).
 
 ## Conhecendo suas sequências
 

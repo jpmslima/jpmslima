@@ -5,7 +5,7 @@
 ## Primeiras observações:
 
 - Este tutorial foi construído ***apenas para fins didáticos***. <span style="color:red">**A reprodução dele para qualquer outro fim não é permitida e nem consentida.**</span> 
-- As etapas abaixo demonstram como obter dendrogramas pelos diferentes métodos usando a ferramenta [MEGAX](www.megasoftware.net). Lembre-se que a obtenção de Árvores Filogenéticas para estimar uma Filogenia é um problema muito complexo, que envolve teste de hipóteses e alterações na amostragem de sequências.
+- As etapas abaixo demonstram como obter dendrogramas pelos diferentes métodos usando a ferramenta [MEGAX](http://www.megasoftware.net). Lembre-se que a obtenção de Árvores Filogenéticas para estimar uma Filogenia é um problema muito complexo, que envolve teste de hipóteses e alterações na amostragem de sequências.
 
 ## Objetivo
 
@@ -23,7 +23,7 @@ Nós utilizaremos [este *dataset*](https://drive.google.com/uc?export=download&i
 
 ## Teste do modelo de substituição nucleotídica
 
-Nas suas primeiras versões o programa [MEGA](www.megasoftware.net)  não possuía uma rotina para realização de testes do modelo de substituição. Mesmo assim, ele foi um dos primeiros programas a incluir nativamente esta função. O algoritmo é rápido, no entanto ele testa um número maior de modelos dos que estão disponíveis na própria ferramenta.
+Nas suas primeiras versões o programa [MEGA](http://www.megasoftware.net)  não possuía uma rotina para realização de testes do modelo de substituição. Mesmo assim, ele foi um dos primeiros programas a incluir nativamente esta função. O algoritmo é rápido, no entanto ele testa um número maior de modelos dos que estão disponíveis na própria ferramenta.
 
 - Utilizaremos o arquivo de alinhamento múltiplo de sequências [vert-aligned.fasta](https://drive.google.com/uc?export=download&id=12-vfD16vil2cTmNM2VOMfuj48LGo9iT2).
 - Execute o programa MEGAX (nos computadores do curso o ícone estará na área de trabalho).

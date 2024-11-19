@@ -43,7 +43,7 @@ Nada será executado, apenas uma saída padrão será mostrada na tela.
 
 ### Trabalhando com a estrutura alvo
 
-Devemos baixar o arquivo da estrutura-alvo que iremos trabalhar. Para este tutorial, utilizaremos a lisozima da clara de ovo de galinha (código PDB [1AKI](www.rcsb.org/structure/1AKI)). Acesse o banco [PDB](www.rcsb.org) e faça o download do arquivo pdb para a estrutura cristalizada dessa proteína. Se você estiver numa interface de linha de comando (CLI) você também utilizar os comandos linux `curl` ou `wget`:
+Devemos baixar o arquivo da estrutura-alvo que iremos trabalhar. Para este tutorial, utilizaremos a lisozima da clara de ovo de galinha (código PDB [1AKI](http://www.rcsb.org/structure/1AKI)). Acesse o banco [PDB](http://www.rcsb.org) e faça o download do arquivo pdb para a estrutura cristalizada dessa proteína. Se você estiver numa interface de linha de comando (CLI) você também utilizar os comandos linux `curl` ou `wget`:
 
 ```shell
 curl https://files.rcsb.org/download/1AKI.pdb > 1AKI.pdb

@@ -79,7 +79,7 @@ The RCSB PDB is the main bank of experimentally resolved protein structures. Thi
 - To obtain information about protein ligands.
 
 Let's now check an entry in the PDB database:
-- Open the Protein Data Bank (PDB) Home Page: [www.rcsb.org](www.rcsb.org)
+- Open the Protein Data Bank (PDB) Home Page: [http://rcsb.org](http://rcsb.org)
 - In the field "PDB ID or Text" enter the term: 3HTB
 - From the opened page, obtain the following information:
   - Protein ID.

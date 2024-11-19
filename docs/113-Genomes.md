@@ -10,7 +10,7 @@ A busca de regiões de interesse pode ser realizada usando a posição do genoma
 
 ## Navegando pelo genoma humano
 
-**Passo 1:** Abra o navegador da internet e vá no seguinte endereço: [https://genome.ucsc.edu/]([UCSC Genome Browser Home](https://genome.ucsc.edu/)).
+**Passo 1:** Abra o navegador da internet e vá no seguinte endereço: [UCSC Genome Browser Home](https://genome.ucsc.edu/).
 
 **Passo 2:** Em “*Our Tools*”, clique em “*Genome Browser*”.
 

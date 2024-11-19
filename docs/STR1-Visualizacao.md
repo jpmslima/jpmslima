@@ -160,7 +160,7 @@ No entanto, veja as fórmulas de todos os aminoácidos de forma mais prática ut
 
 ## Visualizando peptídeos e estruturas
 
-Este exercício cobrirá os tipos básicos de estruturas de proteínas representados no banco [PDB](rcsb.org). O termo *fold* refere-se a um tipo global de arranjo de estruturas secundárias, como feixe de hélices-alfa ou um barril de folhas betas. Apesar de existirem milhares de estruturas experimentalmente determinadas, o número de *folds* únicos que essas proteínas adotam é limitado, e todas as proteínas podem ser classificadas em uma das categorias de *folds*, que são anotadas em bancos de dados como o CATH e o SCOP. No geral, funções semelhantes podem estar associadas a certos *folds* proteicos, e a classificação dos *folds* serve como uma ferramenta importante para entender a possível função de uma proteína.
+Este exercício cobrirá os tipos básicos de estruturas de proteínas representados no banco [PDB](http://rcsb.org). O termo *fold* refere-se a um tipo global de arranjo de estruturas secundárias, como feixe de hélices-alfa ou um barril de folhas betas. Apesar de existirem milhares de estruturas experimentalmente determinadas, o número de *folds* únicos que essas proteínas adotam é limitado, e todas as proteínas podem ser classificadas em uma das categorias de *folds*, que são anotadas em bancos de dados como o CATH e o SCOP. No geral, funções semelhantes podem estar associadas a certos *folds* proteicos, e a classificação dos *folds* serve como uma ferramenta importante para entender a possível função de uma proteína.
 
 - Abra o USCF Chimera.
 

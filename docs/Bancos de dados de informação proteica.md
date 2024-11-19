@@ -1,4 +1,4 @@
-[![Biome](https://drive.google.com/uc?id=1Rgh88avopwh7YtUKsD5hXMwF3BFH5-Kj)](bioinfo.ufrn.br)
+[![Biome](https://drive.google.com/uc?id=1Rgh88avopwh7YtUKsD5hXMwF3BFH5-Kj)](http://bioinfo.ufrn.br)
 
 
 # Bancos de dados de informação proteica
