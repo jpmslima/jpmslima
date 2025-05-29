@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="jpmslima" /><link rel="canonical" href="https://jpmslima.github.io/slides/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="jpmslima" /><link rel="canonical" href="https://jpmslima.github.io/gromacs/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Slides de Acompanhamento - Tutoriais BioinfoX</title>
+    <title>GROMACS Post-Simulation Analysis Guide - Tutoriais BioinfoX</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Slides de Acompanhamento";
-        var mkdocs_page_input_path = "slides.md";
-        var mkdocs_page_url = "/slides/";
+        var mkdocs_page_name = "GROMACS Post-Simulation Analysis Guide";
+        var mkdocs_page_input_path = "gromacs.md";
+        var mkdocs_page_url = "/gromacs/";
       </script>
     
     <!--[if lt IE 9]>
@@ -94,30 +94,10 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Bioinformática Estrutural</span></p>
-              <ul class="current">
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../basic2/">Inicial</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Slides de Acompanhamento</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#introducao-a-bioinformatica-estrutural">Introdução a Bioinformática Estrutural</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#alinhamento-de-sequencias-proteicas">Alinhamento de Sequências Proteicas</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#representacao-computacional-de-moleculas">Representação Computacional de Moléculas</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#metodos-experimentais-de-resolucao-de-estruturas">Métodos Experimentais de Resolução de Estruturas</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#abordagens-in-silico-de-modelagem-de-proteinas">Abordagens In Silico de Modelagem de Proteínas</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#modelagem-de-proteinas-baseada-em-ai">Modelagem de proteínas baseada em AI</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#modelagem-de-proteinas-de-membrana">Modelagem de proteínas de Membrana</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#simulacoes-de-atracamento-molecular">Simulações de Atracamento Molecular</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#introducao-a-dinamica-molecular">Introdução a Dinâmica Molecular</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../slides/">Slides de Acompanhamento</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../tools/">Programas e Ferramentas</a>
                   </li>
@@ -214,8 +194,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Bioinformática Estrutural</li>
-      <li class="breadcrumb-item active">Slides de Acompanhamento</li>
+      <li class="breadcrumb-item active">GROMACS Post-Simulation Analysis Guide</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -224,40 +203,74 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="apresentacoesslides-utilizados">Apresentações/Slides Utilizados</h1>
-<h2 id="introducao-a-bioinformatica-estrutural">Introdução a Bioinformática Estrutural</h2>
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQD_5k3KYLzbDp7CpyQveEUXXTVYg_KM2M7iJMF96OLg8xHGYPMZQw_hkMP0ynLlqybVhfEtdkEY0oE/embed?start=false&loop=false&delayms=3000" frameborder="0" width="2560" height="1469" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                <h1 id="gromacs-post-simulation-analysis-guide">GROMACS Post-Simulation Analysis Guide</h1>
+<p>After running your molecular dynamics simulation with GROMACS and obtaining 10 frames (<code>.gro</code> files), here are the commands to perform common analyses like RMSD, RMSF, and trajectory visualization.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>First, you'll need to have:
+1. Your original topology file (<code>.tpr</code>)
+2. A compiled version of GROMACS (e.g., <code>gmx</code> or <code>gmx_mpi</code>)</p>
+<h2 id="1-convert-gro-files-to-xtc-trajectory">1. Convert GRO files to XTC trajectory</h2>
+<p>Since you have separate GRO files, first combine them into a trajectory file:</p>
+<pre><code class="language-bash"># Combine GRO files into XTC trajectory
+gmx trjcat -f step1.gro step2.gro step3.gro step4.gro step5.gro step6.gro step7.gro step8.gro step9.gro step10.gro -o trajectory.xtc
+</code></pre>
+<h2 id="2-rmsd-root-mean-square-deviation-analysis">2. RMSD (Root Mean Square Deviation) Analysis</h2>
+<p>Calculate RMSD to assess structural stability:</p>
+<pre><code class="language-bash"># RMSD relative to first frame
+gmx rms -s your_topology.tpr -f trajectory.xtc -o rmsd.xvg -tu ns
 
-<h2 id="alinhamento-de-sequencias-proteicas">Alinhamento de Sequências Proteicas</h2>
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTCGcGaErUGKTdJAI7WL7BiFtgQD4bsDyj6r7EHv-eTBokfc5rAUcVXmUa6_N2Vtd0e2mNu6IMO7-Yc/embed?start=false&loop=false&delayms=3000" frameborder="0" width="2560" height="1469" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+# RMSD relative to crystal/reference structure (if available)
+gmx rms -s reference.pdb -f trajectory.xtc -o rmsd_ref.xvg -tu ns
+</code></pre>
+<p>When prompted:
+- Select "Backbone" for protein backbone RMSD
+- Or "Protein" for whole protein RMSD</p>
+<h2 id="3-rmsf-root-mean-square-fluctuation-analysis">3. RMSF (Root Mean Square Fluctuation) Analysis</h2>
+<p>Calculate RMSF to identify flexible regions:</p>
+<pre><code class="language-bash">gmx rmsf -s your_topology.tpr -f trajectory.xtc -o rmsf.xvg -res
+</code></pre>
+<p>When prompted, select the group you want to analyze (typically "Protein").</p>
+<h2 id="4-visualization-of-trajectories">4. Visualization of Trajectories</h2>
+<p>To visualize your trajectory:</p>
+<pre><code class="language-bash"># Convert to PDB format (optional)
+gmx trjconv -s your_topology.tpr -f trajectory.xtc -o trajectory.pdb
 
-<h2 id="representacao-computacional-de-moleculas">Representação Computacional de Moléculas</h2>
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSK5jWjRD2ux2f1kTaTRE9zwTsG0H2D76DgZNVyA4jnY6hK2zZIah2wxBaRcunjr0KyvyWWXVAeM5JV/embed?start=false&loop=false&delayms=3000" frameborder="0" width="2560" height="1469" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
-<h2 id="metodos-experimentais-de-resolucao-de-estruturas">Métodos Experimentais de Resolução de Estruturas</h2>
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR9wMxqVtTRf_y7r7dGwuxs4dn7sP5bhNlO7wpXoyQW4AuNJSwN8GDuox3SM1ivvOGjKCzGXE9HA4sw/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
-<h2 id="abordagens-in-silico-de-modelagem-de-proteinas">Abordagens <em>In Silico</em> de Modelagem de Proteínas</h2>
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSxfIRHcn4rOO9j4wugra0jTWU2RqqH7v-S_p36FLgmvrKAbIxG8QIJlPZ1NLzEw-diJTpG2nb8jQqF/embed?start=false&loop=false&delayms=3000" frameborder="0" width="2560" height="1469" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
-<h2 id="modelagem-de-proteinas-baseada-em-ai">Modelagem de proteínas baseada em AI</h2>
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS6m8FGVk6cALRB-O2HuuA4bkMbrlbtxCOuC_1ds1BsO0Yw8xZ5wBV6o3Zc0zN0BbmxjuB-tvB_ghKT/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
-<h2 id="modelagem-de-proteinas-de-membrana">Modelagem de proteínas de Membrana</h2>
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT3v_vPBhDHaP15cDKz29ZPVCK83tBdcpr55NAZ-9BblrPtbULmNMr-Tgl0LJ3sKS9MiqOLnHil_JF2/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
-<h2 id="simulacoes-de-atracamento-molecular">Simulações de Atracamento Molecular</h2>
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSwOmCgCKujlsPOTdd0AP9_4n63rQnJSdw4eaTrVTdGaszsbHB1Y2C8tcjxd_dOBhfMxQyWWKiZU0mB/embed?start=false&loop=false&delayms=5000" frameborder="0" width="2560" height="1469" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
-<h2 id="introducao-a-dinamica-molecular">Introdução a Dinâmica Molecular</h2>
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSty30mCDbTNhK47YC0lp5GJnm9nt-YJa5gt0uLXpZd4pF7nGjUCUvvsJfdn3xWBVFzibGgDao_P_GS/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+# Or visualize directly with VMD/Chimera/PyMOL
+vmd your_topology.tpr trajectory.xtc
+</code></pre>
+<h2 id="5-other-useful-analyses">5. Other Useful Analyses</h2>
+<h3 id="radius-of-gyration">Radius of Gyration</h3>
+<pre><code class="language-bash">gmx gyrate -s your_topology.tpr -f trajectory.xtc -o gyrate.xvg
+</code></pre>
+<h3 id="hydrogen-bonds-analysis">Hydrogen Bonds Analysis</h3>
+<pre><code class="language-bash">gmx hbond -s your_topology.tpr -f trajectory.xtc -num hbonds.xvg
+</code></pre>
+<h3 id="secondary-structure-analysis-dssp">Secondary Structure Analysis (DSSP)</h3>
+<pre><code class="language-bash">gmx do_dssp -f trajectory.xtc -s your_topology.tpr -o ss.xpm -sc ss.xvg
+</code></pre>
+<h2 id="plotting-results">Plotting Results</h2>
+<p>You can plot the <code>.xvg</code> files using <code>xmgrace</code> or Python (matplotlib):</p>
+<pre><code class="language-bash">xmgrace rmsd.xvg
+</code></pre>
+<p>Or in Python:</p>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+data = np.loadtxt('rmsd.xvg', comments=['#', '@'])
+plt.plot(data[:,0], data[:,1])
+plt.xlabel('Time (ns)')
+plt.ylabel('RMSD (nm)')
+plt.show()
+</code></pre>
+<h2 id="notes">Notes</h2>
+<ol>
+<li>With only 10 frames, your analysis will be limited in statistical significance</li>
+<li>For more meaningful results, consider running longer simulations (typically 100+ ns for proteins)</li>
+<li>Always check your <code>.xvg</code> files for reasonable values before further analysis</li>
+</ol>
+<p>Would you like me to elaborate on any specific analysis or provide more detailed commands for a particular part of the process?</p>
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../basic2/" class="btn btn-neutral float-left" title="Inicial"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../tools/" class="btn btn-neutral float-right" title="Programas e Ferramentas">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
 
   <hr/>
 
@@ -279,10 +292,6 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../basic2/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../tools/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
