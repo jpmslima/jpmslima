@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="jpmslima" /><link rel="canonical" href="https://jpmslima.github.io/enzima-annot/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="jpmslima" /><link rel="canonical" href="https://jpmslima.github.io/MEGAX_ptbr/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Integração de Bancos - Exemplo - Tutoriais BioinfoX</title>
+    <title>Inferindo Filogenias usando MEGAX - Tutoriais BioinfoX</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Integra\u00e7\u00e3o de Bancos - Exemplo";
-        var mkdocs_page_input_path = "enzima-annot.md";
-        var mkdocs_page_url = "/enzima-annot/";
+        var mkdocs_page_name = "Inferindo Filogenias usando MEGAX";
+        var mkdocs_page_input_path = "MEGAX_ptbr.md";
+        var mkdocs_page_url = "/MEGAX_ptbr/";
       </script>
     
     <!--[if lt IE 9]>
@@ -53,7 +53,7 @@
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">Tutoriais Iniciais de Bioinformática</span></p>
-              <ul class="current">
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../basic1/">Inicial</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../101/">Introdução a linha de comando UNIX</a>
@@ -78,19 +78,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../r-colab/">Introdução ao R usando o Google Colab</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Integração de Bancos - Exemplo</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#identificacao-e-caracterizacao-in-silico-de-uma-enzima">Identificação e caracterização in silico de uma enzima</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#primeira-parte-obtendo-informacoes-gerais">Primeira Parte: Obtendo informações Gerais</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#segunda-parte-informacoes-geneticas">Segunda Parte: Informações genéticas</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#terceira-parte-estrutura-e-predicao-do-efeito-de-modificacoes">Terceira Parte: Estrutura e predição do efeito de modificações</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../enzima-annot/">Integração de Bancos - Exemplo</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../KEGG/">Explorando Vias Metabólicas</a>
                   </li>
@@ -206,8 +194,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Tutoriais Iniciais de Bioinformática</li>
-      <li class="breadcrumb-item active">Integração de Bancos - Exemplo</li>
+      <li class="breadcrumb-item active">Inferindo Filogenias usando MEGAX</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -216,68 +203,37 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="busca-e-integracao-em-bancos-de-dados-exemplo-1">Busca e integração em Bancos de Dados - Exemplo 1</h1>
-<p>Prof. Gustavo de Souza (DBq/BioME/UFRN)</p>
+                <h1 id="inferindo-filogenias-usando-megax">Inferindo Filogenias usando MEGAX</h1>
+<p>Um curso intensivo.</p>
+<p>Agora vamos usar este <a href="https://drive.google.com/uc?export=download&amp;id=13bsRE3MGmkKOL0mjT-DigvzerH0BDau6">conjunto de dados</a> para construir as árvores filogenéticas. Para isso, usaremos o <em><strong>MEGAX</strong></em>.</p>
 <ul>
-<li>O tutorial abaixo é <strong><em>apenas para fins didáticos</em></strong>. <span style="color:red"><strong>A reprodução dele para qualquer outro fim não é permitida e nem consentida.</strong></span></li>
+<li>Abra o alinhamento. </li>
+<li>Na próxima janela, clique em <code style="border: 1px solid red; background-color: #f9f2f4; padding: 2px 5px; border-radius: 3px; color: #c7254e;">Analyze</code> como <em>DAMBE</em> (sequências de nucleotídeos codificadoras de proteínas e o código genético).</li>
+<li>
+<p>Teste do modelo de substituição de nucleotídeos.</p>
+<p>📌<em>O teste do modelo de substituição de nucleotídeos às vezes resulta em modelos que não estão presentes nas opções do MEGA. Nesses casos, você deve escolher um modelo que possua os parâmetros necessários adequados para representar seu alinhamento de sequências. Embora altamente recomendado, especialmente para iniciantes em análises filogenéticas, este teste não é crítico.</em>
+* Examine as estatísticas do alinhamento. Clique no ícone TA à direita para iniciar o Data Explorer.</p>
+</li>
+<li>
+<p>Construa uma árvore filogenética de Neighbor-joining, com um teste de bootstrap. Use a deleção completa neste conjunto de dados. Você pode usar Tamura-Nei 93, já que o modelo GTR não existe para o método Neighbor-Joining. Não se esqueça de examinar o parâmetro de forma gama para o modelo TN93 e a proporção de sítios invariantes (se necessário).</p>
+</li>
+<li>
+<p>Construa uma árvore filogenética usando Parcimônia e também Máxima Verossimilhança. Para este último, você pode usar o modelo GTR (General Time-Reversible), selecionado pelo teste do modelo de substituição de nucleotídeos. Use também a <strong><em>deleção completa</em></strong> em ambos os métodos.</p>
+<p>📌<em>No método ML, você não precisa ajustar um parâmetro de forma gama específico, apenas precisa configurar para usar Gamma.</em></p>
+</li>
+<li>
+<p>Não se esqueça de enraizar as árvores quando necessário e de salvá-las.</p>
+<p>A árvore demonstrada abaixo não está enraizada com o outgroup mais plausível!</p>
+</li>
 </ul>
-<h2 id="identificacao-e-caracterizacao-in-silico-de-uma-enzima">Identificação e caracterização <em>in silico</em> de uma enzima</h2>
-<p>Partiremos agora de um exemplo para caracterização de uma enzima a partir da sequência de aminoácidos, a partir do <em>E.C. number</em> (<em>Enzyme Comission</em>) e do próprio nome da enzima.</p>
-<h3 id="primeira-parte-obtendo-informacoes-gerais">Primeira Parte: Obtendo informações Gerais</h3>
-<p>A sequência abaixo corresponde a sequência primária de uma enzima do metabolismo.</p>
-<pre><code>&gt;Enzyme_Test_1
-MVKIVTVKTQAYQDQKPGTSGLRKRVKVFQSSANYAENFIQSIISTVEPAQRQEATLVVGGDGRFYMKEAIQLIARIAA
-ANGIGRLVIGQNGILSTPAVSCIIRKIKAIGGIILTASHNPGGPNGDFGIKFNISNGGPAPEAITDKIFQISKTIEEYA
-VCPDLKVDLGVLGKQQFDLENKFKPFTVEIVDSVEAYATMLRSIFDFSALKELLSGPNRLKIRIDAMHGVVGPYVKKIL
-CEELGAPANSAVNCVPLEDFGGHHPDPNLTYAADLVETMKSGEHDFGAAFDGDGDRNMILGKHGFFVNPSDSVAVIAAN
-IFSIPYFQQTGVRGFARSMPTSGALDRVASATKIALYETPTGWKFFGNLMDASKLSLCGEESFGTGSDHIREKDGLWAV
-LAWLSILATRKQSVEDILKDHWQKYGRNFFTRYDYEEVEAEGANKMMKDLEALMFDRSFVGKQFSANDKVYTVEKADNF
-EYSDPVDGSISRNQGLRLIFTDGSRIVFRLSGTGSAGATIRLYIDSYEKDVAKINQDPQVMLAPLISIALKVSQLQERT
-GRTAPTVIT
-</code></pre>
-<p>A partir de uma busca por similaridade em bancos de dados biológicos (BLAST contra o NCBI e/ou contra o Uniprot), identifique e caracterize esta enzima de acordo com os seguintes itens:
-- O nome da enzima.
-- O organismo do qual ela faz parte.
-- O seu número E.C. (Consulte o banco de dados BRENDA - <a href="https://www.brenda-enzymes.org/">https://www.brenda-enzymes.org/</a>).
-- Reação enzimática.
-- Identifique o substrato da enzima.
-- Produto formado.
-- Via metabólica.
-- Substratos alternativos.
-- Inibidores.</p>
-<blockquote>
-<p><em>É importante prestar bem atenção nas páginas e nos links que os bancos de dados fornecem. Essas páginas mudam com uma certa periodicidade, mas as informações gerais tendem a se manter integradas.</em></p>
-</blockquote>
-<h3 id="segunda-parte-informacoes-geneticas">Segunda Parte: Informações genéticas</h3>
-<p>Alguns polimorfismos (SNPs) em genes estão associados à condições patológicas, como Erros Inatos do Metabolismo ou doenças que podem ser desenvolvidas ao longo da vida. Para isso, é vasta a quantidade de dados relativos a seres humanos, e a sua integração é extremamente necessária. O objetivo agora é verificar se mutações/modificações na enzima do exercício anterior estão relacionadas à situações patológicas.</p>
-<p>Para isso, vá para a entrada do Genbank do gene que codifica para a enzima acima e procure as informações abaixo:
-- Quais os SNPs já relatados para esta proteína em humanos?
-  - Procure no menu que contém <strong><em>Related Information</em></strong>.
-- Existe alguma STS (sequence-tagged site) para amplificação específica deste gene por PCR? Veja os iniciadores que podem utilizados para isso.
-- Existem condições associadas?
-- Verificar a opção OMIM (<em>Online Mendelian Inheritance in Man®</em>) no menu Related Information.
-- Verifique a sua direita a subdivisão dos resultados em dbSNPs e os UniSTS.</p>
-<p>Condições ou doenças também podem ser procuradas diretamente no <a href="https://www.omim.org/">OMIM</a>. Para isso, abra a página do OMIM e faça uma busca, usando o nome da proteína acima. Verifique as informações para esta enzima.</p>
-<h3 id="terceira-parte-estrutura-e-predicao-do-efeito-de-modificacoes">Terceira Parte: Estrutura e predição do efeito de modificações</h3>
-<p>A partir do número de acesso Uniprot (ou do <em>entry name</em>) da proteína iremos obter informações sobre a modelagem computacional automática dessa proteína e sobre a predição funcional de modificações de sua sequência a partir do <a href="https://deepmind.google/discover/blog/a-catalogue-of-genetic-mutations-to-help-pinpoint-the-cause-of-diseases/">AlphaMissense</a>. O número de acesso Uniprot pode ser obtido nas buscas realizadas na 1a e na 2a parte deste tutorial.</p>
+<h2 id="exercicio">Exercício:</h2>
 <ul>
-<li>Abra a página do <a href="https://alphafold.ebi.ac.uk/">AlphaFoldDB</a>.</li>
-<li>No campo de busca, coloque o número de acesso Uniprot ou o seu <em>entry name</em> e clique em <code>SEARCH</code>.</li>
-<li>Clique no resultado obtido.</li>
+<li>Qual espécie você escolhe para ser o outgroup do conjunto de dados acima? Explique.</li>
+<li>Compare as árvores obtidas e explique a filogenia, sempre procurando por valores de bootstrap que a sustentem (ou não).</li>
 </ul>
-<p>No registro do AlphaFoldDB, você verá a estrutura tridimensional modelada e logo abaixo você verá um gráfico com a predição de impacto funcional realizada pelo AlphaMissense. Cada modificação prevista (troca de um aminoácido por qualquer um dos outros 19) em cada sítio da sequência primária pode ser observada no gráfico, que descreve o resultado em três categorias: Benginas (Azuis), Provavelmente Patogênicas (Vermelhas) e Efeito incerto (Gradiente entre azul e vermelho). Esta escala reflete o AlphaMissense escore (<em>am_score</em>), que varia entre 0 (mais benigna) até 1 (mais patogênica).</p>
-<p><strong>Pergunta:</strong>
-Quais regiões da proteína são menos sensíveis a modificações?</p>
-<blockquote>
-<p><em>Lembre-se que a predição de efeito funcional do AlphaMissense apesar de muito precisa, é apenas uma predição. O efeito funcional depende também de outros fatores.</em></p>
-</blockquote>
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../r-colab/" class="btn btn-neutral float-left" title="Introdução ao R usando o Google Colab"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../KEGG/" class="btn btn-neutral float-right" title="Explorando Vias Metabólicas">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
 
   <hr/>
 
@@ -299,10 +255,6 @@ Quais regiões da proteína são menos sensíveis a modificações?</p>
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../r-colab/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../KEGG/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
