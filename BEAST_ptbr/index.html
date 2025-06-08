@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="jpmslima" /><link rel="canonical" href="https://jpmslima.github.io/BEAST_ptbr/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Primeiros passos no BEAST - Tutoriais BioinfoX</title>
+    <title>Usando o BEAST - Tutoriais BioinfoX</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Primeiros passos no BEAST";
+        var mkdocs_page_name = "Usando o BEAST";
         var mkdocs_page_input_path = "BEAST_ptbr.md";
         var mkdocs_page_url = "/BEAST_ptbr/";
       </script>
@@ -151,10 +151,46 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Análise Evolucionária de Sequências (Evolução Molecular)</span></p>
-              <ul>
+              <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../satsub-ptbr/">Análise de Saturação de Substituições</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../bestfit-ptbr/">Escolha do Modelo de Substituição</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Usando o BEAST</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#objetivos">Objetivos</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#geral">Geral</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#especificos">Específicos</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#observacoes">Observações:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#importando-o-alinhamento">Importando o alinhamento</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#definindo-as-tip-dates-quando-aplicavel">Definindo as Tip Dates (quando aplicável)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#configurando-o-modelo-evolutivo">Configurando o modelo evolutivo</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#configurando-o-modelo-de-relogio-molecular-molecular-clock">Configurando o Modelo de Relógio Molecular (Molecular Clock)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#definindo-os-priors-as-priores">Definindo os priors (as priores)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#definindo-as-opcoes-de-execucao-do-mcmc">Definindo as Opções de Execução do MCMC</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#salvando-e-carregando-os-arquivos-beauti">Salvando e carregando os arquivos BEAUti</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gerando-o-arquivo-xml-do-beast">Gerando o arquivo XML do BEAST</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#executando-o-beast">Executando o BEAST</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#analisando-o-arquivo-de-log-com-o-tracer">Analisando o arquivo de log com o TRACER</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#resumo-e-visualizacao-das-arvores-geradas">Resumo e Visualização das Árvores Geradas</a>
+    </li>
+    </ul>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Diplomado - UChile</span></p>
@@ -194,7 +230,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Primeiros passos no BEAST</li>
+          <li class="breadcrumb-item">Análise Evolucionária de Sequências (Evolução Molecular)</li>
+      <li class="breadcrumb-item active">Usando o BEAST</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -376,6 +413,10 @@ Este é o ícone do BEAUti. Basta dar um duplo clique para executá-lo.</p>
               
             </div>
           </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../bestfit-ptbr/" class="btn btn-neutral float-left" title="Escolha do Modelo de Substituição"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Substitution_saturation_ENG/" class="btn btn-neutral float-right" title="Analysis of Substitution Saturation">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
 
   <hr/>
 
@@ -397,6 +438,10 @@ Este é o ícone do BEAUti. Basta dar um duplo clique para executá-lo.</p>
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
+      <span><a href="../bestfit-ptbr/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Substitution_saturation_ENG/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
