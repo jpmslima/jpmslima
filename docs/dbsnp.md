@@ -10,7 +10,8 @@ Sean B. Carroll​, ["A series of fortunate events: Chance and the Making of the
 
 - Este tutorial foi construído ***apenas para fins didáticos para a disciplina de Bioinformática, do curso de Biomedicina da UFRN***. **A reprodução dele para qualquer outro fim não é permitida e nem consentida pelos professores do curso.**
 
-**ATENÇÃO:**
+<span style="color:red">**ATENÇÃO:**</span>
+
 - O tutorial usa exemplos de doenças genéticas, neurológicas e comportamentais.
 
 ## Introdução e Conceitos
@@ -210,4 +211,3 @@ Na página seguinte você verá a estrutura da proteína e um gráfico que resum
 O vídeo abaixo demonstra a procura pelo gene EGFR:
 
 <iframe src="https://drive.google.com/file/d/1pFc1kVYLBHkjd4zQZOcx61kXjuIapBVP/preview" width="640" height="480" allow="autoplay"></iframe>
-

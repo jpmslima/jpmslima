@@ -39,6 +39,7 @@ A partir de uma busca por similaridade em bancos de dados biológicos (BLAST con
 Alguns polimorfismos (SNPs) em genes estão associados à condições patológicas, como Erros Inatos do Metabolismo ou doenças que podem ser desenvolvidas ao longo da vida. Para isso, é vasta a quantidade de dados relativos a seres humanos, e a sua integração é extremamente necessária. O objetivo agora é verificar se mutações/modificações na enzima do exercício anterior estão relacionadas à situações patológicas.
 
 Para isso, vá para a entrada do Genbank do gene que codifica para a enzima acima e procure as informações abaixo:
+
 - Quais os SNPs já relatados para esta proteína em humanos?
   - Procure no menu que contém ***Related Information***.
 - Existe alguma STS (sequence-tagged site) para amplificação específica deste gene por PCR? Veja os iniciadores que podem utilizados para isso.

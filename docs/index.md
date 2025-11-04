@@ -14,5 +14,9 @@ A bioinformática pode ser definida como a utilização de computadores para a a
 - Tutoriais de Filogenia e Análise Evolucionária de Sequências
 - Tutoriais de Bioinformática Estrutural
 
+## Script de Instalação do ChimeraX
+
+
+
 
 
